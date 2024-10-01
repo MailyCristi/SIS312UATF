@@ -1,8 +1,8 @@
 import java.util.*;
 class Principal{
     public static void main(String [] args){
-        Scanner ie=new Scanner(System.in);
-        int n=ie.nextInt();
+        Scanner i=new Scanner(System.in);
+        int n=i.nextInt();
 
         Cola edades=new Cola(n);
         Pila numeros=new Pila(n);
@@ -10,7 +10,7 @@ class Principal{
         System.out.println("Introducir datos");
 
         while (!edades.isFull()) {
-            int aux=ie.nextInt();
+            int aux=i.nextInt();
             edades.push(aux);
             numeros.push(aux);
         }
