@@ -52,5 +52,6 @@ public class ListaEnlazada {
             System.out.println(aux.dato);
             aux=aux.siguiente;
         }
+
     }
 }
