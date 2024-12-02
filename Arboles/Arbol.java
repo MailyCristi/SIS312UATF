@@ -70,6 +70,29 @@ public class Arbol {
         System.out.println(inicial.info);
     }
 
+    public boolean buscando(Nodo padre, int dato){
+        if(padre!=null){
+            if(padre.info==dato){
+                return true;
+            }else{
+                boolean izq=buscando(padre.izquierda,dato);
+                boolean der=buscando(padre.derecha,dato);
+                if(izq==true || der==true){
+                    return true;
+                }
+            }
+        }
+        return false; 
+    }
+    public int contando(Nodo inicial){
+        if(inicial==null){
+            return 0;
+        }
+        int aux=contando(inicial.izquierda);
+        int aux2=contando(inicial.derecha);
+        return aux+aux2+1;
+    }
+
     //Peso?
     //Mostrar Hojas
     //Mostrar Ramas
